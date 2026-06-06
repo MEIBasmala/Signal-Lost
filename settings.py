@@ -1,8 +1,8 @@
 # is where ALL your constants live — screen size, speeds, colors, frequency definitions.
 
 
-SCREEN_WIDTH = 800
-SCREEN_HEIGHT = 600
+SCREEN_WIDTH = 1000
+SCREEN_HEIGHT = 800
 FPS = 60 
 TITLE = "My Game"
 
@@ -49,9 +49,14 @@ CREATURE_HIT_DRAIN    = 35.0   # battery lost on contact
 
 # Hearts / Health
 PLAYER_MAX_HEARTS = 5
-INVINCIBILITY_DURATION = 120  # frames (2 seconds at 60fps)
+INVINCIBILITY_DURATION = 60   # frames (1 second at 60fps) — shorter, more responsive
 HEART_SIZE = 20               # pixel size of each heart icon
 HEART_PADDING = 8             # space between hearts
+
+# Hit recovery
+PLAYER_HIT_PUSHBACK = 90      # px — knock player away from creature
+CREATURE_HIT_STUN = 45        # frames (0.75s) — creature pauses after hitting you
+CREATURE_HIT_PUSHBACK = 40    # px — creature knocked back too, creates space
 
 
 # Keypad
@@ -63,5 +68,6 @@ KEYPAD_SHAKE_INTENSITY = 5  # px
 
 # Narrative text
 NARRATIVE_TYPE_SPEED = 2      # chars per frame
-NARRATIVE_HOLD_TIME = 180     # frames (3s)
-NARRATIVE_FADE_TIME = 60      # frames (1s)
+NARRATIVE_HOLD_TIME = 360     # frames (6s) — longer for reading
+NARRATIVE_FADE_TIME = 90      # frames (1.5s) — slower fade
+NARRATIVE_LONG_HOLD = 480     # frames (8s) — for very long texts
